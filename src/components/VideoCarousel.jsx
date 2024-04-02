@@ -21,6 +21,11 @@ const VideoCarousel = () => {
   const { isEnd, isLastVideo, startPlay, videoId, isPlaying } = video;
 
   useGSAP(() => {
+    gsap.to("#slider", {
+      transform: `translateX(${-100 * videoId}%) `,
+      duration: 2,
+      ease: "power2.inOut",
+    });
     gsap.to("#video", {
       scrollTrigger: {
         trigger: "#video",
@@ -94,7 +99,8 @@ const VideoCarousel = () => {
       }
       const animUpdate = () => {
         anim.progress(
-          videoRef.current[videoId] / highlightsSlides[videoId].videoDuration
+          videoRef.current[videoId].currentTime /
+            highlightsSlides[videoId].videoDuration
         );
       };
       if (isPlaying) {
@@ -154,6 +160,9 @@ const VideoCarousel = () => {
             <div className="video-carousel_container">
               <div className="w-full h-full flex-center rounded-3xl overflow-hidden bg-black">
                 <video
+                  className={`${
+                    list.id === 2 && "translate-x-44 pointer-events-none"
+                  }`}
                   id="video"
                   playsInline={true}
                   preload="auto"
@@ -167,6 +176,11 @@ const VideoCarousel = () => {
                       isPlaying: true,
                     }));
                   }}
+                  onEnded={() =>
+                    i !== 3
+                      ? handleProcess("video-end", i)
+                      : handleProcess("video-last")
+                  }
                   onLoadedMetadata={(e) => handleLoadedMetadata(i, e)}
                 >
                   <source src={list.video} type="video/mp4"></source>
