@@ -2,7 +2,8 @@
 
 # React 3D Showcase with Three.js & GSAP
 
-![demo-page](https://github.com/NigelMarshal/3d-react-showcase/assets/11574237/e8991ede-de21-48e8-8d79-0f17f7343924)
+![demo-page](https://github.com/NigelMarshal/3d-react-showcase/assets/11574237/c8f87408-072b-4df9-9470-360194b7a233)
+
 
 
 This is a partial clone of Apple's iPhone 15 pro product page where I am using GSAP for animation triggers coupled with Three.js to interact with 3D models of the iPhone, allowing the user to view different iPhone sizes and color schemes. 
