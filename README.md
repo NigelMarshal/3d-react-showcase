@@ -5,8 +5,7 @@
 ![demo-page](https://github.com/NigelMarshal/3d-react-showcase/assets/11574237/c8f87408-072b-4df9-9470-360194b7a233)
 
 
-
-This is a partial clone of Apple's iPhone 15 pro product page where I am using GSAP for animation triggers coupled with Three.js to interact with 3D models of the iPhone, allowing the user to view different iPhone sizes and color schemes. 
+This is a partial clone of Apple's iPhone 15 pro product page where I am using GSAP for animation triggers coupled with Three.js to interact with 3D models of the iPhone, allowing the user to view different iPhone sizes and color schemes. The project is set up with Vite and connected with Sentry for error logging.
 
 ## Technologies used:
 
@@ -15,6 +14,7 @@ This is a partial clone of Apple's iPhone 15 pro product page where I am using G
 - GSAP
 - Vite
 - Tailwind CSS
+- Sentry
 
 ![How to use](https://media.giphy.com/media/Wsju5zAb5kcOfxJV9i/giphy.gif)
 
