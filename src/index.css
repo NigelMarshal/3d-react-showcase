@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  color-scheme: dark;
+}
+
 body {
   color: white;
   width: 100dvw;
