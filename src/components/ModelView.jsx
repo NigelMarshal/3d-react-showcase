@@ -1,8 +1,15 @@
-import { OrbitControls, PerspectiveCamera, View } from "@react-three/drei";
+import {
+  Html,
+  OrbitControls,
+  PerspectiveCamera,
+  View,
+} from "@react-three/drei";
+
+import * as THREE from "three";
 import Lights from "./Lights";
+import Loader from "./Loader";
 import IPhone from "./IPhone";
 import { Suspense } from "react";
-import * as THREE from "three";
 
 const ModelView = ({
   index,
@@ -42,8 +49,7 @@ const ModelView = ({
         name={`${index === 1} ? 'small' : 'large'`}
         position={[0, 0, 0]}
       >
-        {" "}
-        <Suspense fallback={<mesh>Loading...</mesh>}>
+        <Suspense fallback={<Loader />}>
           <IPhone
             scale={index === 1 ? [15, 15, 15] : [17, 17, 17]}
             item={item}

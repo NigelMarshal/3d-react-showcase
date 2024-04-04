@@ -16,18 +16,12 @@ const Features = () => {
       onComplete: () => {
         videoRef.current.play();
       },
-    }),
-      animateWithGsap("#features_title", {
-        y: 0,
-        opacity: 1,
-      });
+    });
+
+    animateWithGsap("#features_title", { y: 0, opacity: 1 });
     animateWithGsap(
       ".g_grow",
-      {
-        scale: 1,
-        opacity: 1,
-        ease: "power1",
-      },
+      { scale: 1, opacity: 1, ease: "power1" },
       { scrub: 5.5 }
     );
     animateWithGsap(".g_text", {
@@ -77,8 +71,6 @@ const Features = () => {
                     className="feature-video g_grow"
                   />
                 </div>
-              </div>
-              <div className="feature-video-container">
                 <div className="overflow-hidden flex-1 h-[50vh]">
                   <img
                     src={explore2Img}
